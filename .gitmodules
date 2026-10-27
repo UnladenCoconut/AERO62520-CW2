@@ -1,0 +1,3 @@
+[submodule "AmberConsole"]
+	path = AmberConsole
+	url = git@github.com:DutchDiederik/AmberConsole.git

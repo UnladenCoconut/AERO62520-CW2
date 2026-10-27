@@ -1,0 +1,56 @@
+#header .typed {
+    text-align: left;
+    color: var(--ac-ink-bright);
+    text-shadow: var(--ac-glow-text);
+    text-transform: none;
+}
+
+#header {
+  background-image:		url('../../images/bg.jpg');
+  background-size: cover;
+  text-transform: none;
+  filter: hue-rotate(-25deg);
+}
+
+#header div.inner div div.ac-field span.ac-field__label {
+  text-transform: none !important;
+}
+
+html, body, #wrapper, #main {
+  background: #000
+}
+
+a:hover {
+  color: var(--ac-ink-bright) !important;
+  border-color: var(--ac-ink-bright) !important;
+}
+
+body .button:hover {
+  background-color: var(--ac-glow-text) !important;
+  box-shadow: var(--ac-ink-bright) !important;
+  color: var(--ac-ink-bright) !important;
+}
+
+
+#footer .inner a {
+  border-bottom: 0;
+  text-decoration: none;
+  filter: none;
+}
+
+#footer .copyright {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+}
+
+#footer .copyright a.no-glow,
+#footer .copyright a.no-glow:hover {
+  text-shadow: none;
+  opacity: 1;
+  filter: none;
+  border-bottom: 0;
+  color: #fff;
+  transition: none;
+  text-transform: none;
+}

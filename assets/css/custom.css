@@ -1,10 +1,3 @@
-#header .typed {
-    text-align: left;
-    color: var(--ac-ink-bright);
-    text-shadow: var(--ac-glow-text);
-    text-transform: none;
-}
-
 #header {
   background-image:		url('../../images/bg.jpg');
   background-size: cover;
@@ -12,12 +5,61 @@
   filter: hue-rotate(-25deg);
 }
 
+/* header title */
 #header div.inner div div.ac-field span.ac-field__label {
   text-transform: none !important;
+  font-size: var(--ac-type-large);
+}
+
+/* header body */
+#header .typed {
+    text-align: left;
+    color: var(--ac-ink-bright);
+    text-shadow: var(--ac-glow-text);
+    text-transform: none;
+    font-size: var(--ac-type-large);
 }
 
 html, body, #wrapper, #main {
   background: #000
+}
+
+.image-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1em;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 1em;
+}
+
+.image-row img {
+    height: 4em;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.work-item .image.fit {
+    display: block;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    margin: 0 0 2em 0;
+}
+
+.work-item .image.fit iframe,
+.work-item .image.fit > div {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: flex;
+}
+
+.work-item .image.fit img {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 100%;
+    object-fit: contain; /* use cover if you'd rather crop than letterbox */
 }
 
 a:hover {
@@ -36,13 +78,7 @@ body .button:hover {
   border-bottom: 0;
   text-decoration: none;
   filter: none;
-}
-
-#footer .copyright {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end; 
-}
+} 
 
 #footer .copyright a.no-glow,
 #footer .copyright a.no-glow:hover {
@@ -53,4 +89,9 @@ body .button:hover {
   color: #fff;
   transition: none;
   text-transform: none;
+}
+
+#main #one header.major h2 {
+  display: flex;
+  justify-content: center;
 }

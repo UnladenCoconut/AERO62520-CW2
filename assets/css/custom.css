@@ -26,10 +26,6 @@
     font-size: var(--ac-type-large);
 }
 
-#main section div .work-item :is(h1, h2, h3, h4, h5, h6) {
-  text-transform: none ;
-}
-
 html, body, #wrapper, #main {
   background: #000
 }
@@ -69,7 +65,7 @@ html, body, #wrapper, #main {
     flex: 1 1 0;
     min-width: 0;
     height: 100%;
-    object-fit: contain; /* use cover if you'd rather crop than letterbox */
+    object-fit: contain;
 }
 
 a:hover {
@@ -83,7 +79,11 @@ body .button:hover {
   color: var(--ac-ink-bright) !important;
 }
 
+#header div.inner div.icons a {
+  color: var(--ac-glow-text);
+}
 
+#header div.inner div.icons a,
 #footer .inner a {
   border-bottom: 0;
   text-decoration: none;
@@ -176,4 +176,8 @@ body .button:hover {
     grid-row: span 3;
     width: auto;
     padding: 0;
+}
+
+#main section * {
+  text-transform: none;
 }

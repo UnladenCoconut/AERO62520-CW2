@@ -1,13 +1,20 @@
 (async () => {
-  const SPEED = 20;   // ms per character
+  const SPEED = 20; // ms per character
   const els = [...document.querySelectorAll('.typed')];
-  const texts = els.map(el => el.textContent.trim());
 
-  els.forEach(el => { el.textContent = ''; el.style.visibility = 'visible'; });
+  const items = els.map(el => {
+    const text = el.textContent.trim();
+    el.innerHTML = '<span></span><span style="visibility:hidden"></span>';
+    el.style.visibility = 'visible';
+    const [shown, rest] = el.children;
+    rest.textContent = text;
+    return { text, shown, rest };
+  });
 
-  for (const [i, el] of els.entries()) {
-    for (const ch of texts[i]) {
-      el.textContent += ch;
+  for (const { text, shown, rest } of items) {
+    for (let i = 1; i <= text.length; i++) {
+      shown.textContent = text.slice(0, i);
+      rest.textContent = text.slice(i);
       await new Promise(r => setTimeout(r, SPEED));
     }
   }

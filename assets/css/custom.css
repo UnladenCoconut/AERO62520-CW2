@@ -124,20 +124,29 @@ body .button:hover {
 .work-item:hover .image img { opacity: .6; }
 
 .hover-links {
-  position: absolute; inset: 0;
-  display: flex; align-items: center; justify-content: center; gap: .5em;
-  opacity: 0; transition: opacity .3s; pointer-events: none;
+  position: absolute; 
+  inset: 0;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: .5em;
+  opacity: 0; 
+  transition: opacity .3s; 
+  pointer-events: none;
   z-index: 5;
   bottom: 2em;
 }
 .work-item:hover .hover-links { opacity: 1; }
 
 .hover-links a.button {
+    min-width: auto !important;
+    flex: 0 0 auto;
+    white-space: nowrap;
     pointer-events: auto;
     color: var(--ac-ink-bright);
     text-shadow: var(--ac-glow-text);
     background-color: rgba(0,0,0,0.8) !important;
-}
+  }
 
 html body header#header footer#footer div.inner ul.copyright li a:hover {
   color: var(--ac-glow-text);

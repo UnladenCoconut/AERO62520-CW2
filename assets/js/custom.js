@@ -1,0 +1,3 @@
+$('.lightbox').poptrox({
+    usePopupCaption: false
+});

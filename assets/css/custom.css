@@ -92,11 +92,11 @@ body .button:hover {
 
 #footer .copyright a.no-glow,
 #footer .copyright a.no-glow:hover {
-  text-shadow: none;
   opacity: 1;
   filter: none;
   border-bottom: 0;
-  color: #fff;
+  color: var(--ac-glow-text) !important;
+  text-shadow: var(--ac-glow-text) !important;
   transition: none;
   text-transform: none;
 }
@@ -137,6 +137,10 @@ body .button:hover {
     color: var(--ac-ink-bright);
     text-shadow: var(--ac-glow-text);
     background-color: rgba(0,0,0,0.8) !important;
+}
+
+html body header#header footer#footer div.inner ul.copyright li a:hover {
+  color: var(--ac-glow-text);
 }
 
 .poptrox-popup .caption {

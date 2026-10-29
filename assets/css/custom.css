@@ -111,7 +111,7 @@ body .button:hover {
 
 .work-item, .work-item .media { position: relative; }
 
-.work-item a.image img { 
+.work-item .image img { 
   transition: opacity .3s; 
 }
 
@@ -121,30 +121,22 @@ body .button:hover {
     object-fit: cover;
 }
 
-.work-item:hover a.image img { opacity: .6; }
+.work-item:hover .image img { opacity: .6; }
 
-.hover-links, .work-item.video a.image:after {
-    position: absolute; inset: 0;
-    display: flex; align-items: center; justify-content: center; gap: .5em;
-    opacity: 0; transition: opacity .3s; pointer-events: none;
+.hover-links {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center; gap: .5em;
+  opacity: 0; transition: opacity .3s; pointer-events: none;
+  z-index: 5;
+  bottom: 2em;
 }
-.hover-links { z-index: 5; }
-.work-item:hover .hover-links,
-.work-item.video:hover a.image:after { opacity: 1; }
-
-.work-item.video a.image:after {
-    content: "Play video";
-    color: #fff; font-size: 1.3em;
-}
+.work-item:hover .hover-links { opacity: 1; }
 
 .hover-links a.button {
     pointer-events: auto;
     color: var(--ac-ink-bright);
     text-shadow: var(--ac-glow-text);
-}
-
-.hover-links a.button {
-  background-color: rgba(0,0,0,0.6) !important;
+    background-color: rgba(0,0,0,0.8) !important;
 }
 
 .poptrox-popup .caption {

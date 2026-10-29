@@ -26,6 +26,10 @@
     font-size: var(--ac-type-large);
 }
 
+#main section div .work-item :is(h1, h2, h3, h4, h5, h6) {
+  text-transform: none ;
+}
+
 html, body, #wrapper, #main {
   background: #000
 }
@@ -157,4 +161,19 @@ body .button:hover {
 
 #main section div.image-row a {
   border: none;
+}
+
+/* align row items on a grid even if text overflows */
+#two .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2em;
+}
+
+#two .row > .work-item {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    width: auto;
+    padding: 0;
 }

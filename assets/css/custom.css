@@ -186,3 +186,8 @@ html body header#header footer#footer div.inner ul.copyright li a:hover {
 #main section * {
   text-transform: none;
 }
+
+.poptrox-popup {
+  width: min(90vw, 800px) !important;
+  height: auto !important;
+}
